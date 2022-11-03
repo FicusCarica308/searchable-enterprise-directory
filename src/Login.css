@@ -1,0 +1,14 @@
+#login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login {
+    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
