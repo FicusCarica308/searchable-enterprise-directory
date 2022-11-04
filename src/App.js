@@ -1,4 +1,5 @@
 import Login from './Login.js'
+import Search from './Search'
 import { useState } from 'react';
 import './App.css';
 
@@ -8,7 +9,13 @@ function App() {
 
   return (
     <div className='App'>
-      {!loggedIn ? <Login setUserData={setUserData} setLoggedIn={setLoggedIn}></Login> : <button onClick={()=> setLoggedIn(false)}>Logout</button>}
+      {!loggedIn ?
+        <Login setUserData={setUserData} setLoggedIn={setLoggedIn}></Login>
+        :
+        <>
+          <Search userData={userData} setLoggedIn={setLoggedIn} setUserData={setUserData}></Search>
+        </>
+      }
     </div>
   );
 }
