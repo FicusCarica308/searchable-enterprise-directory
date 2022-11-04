@@ -4,11 +4,30 @@
 }
 
 #login {
+    width: 10vw;
     display:flex;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 80vh;
+    padding: 85px;
+    background-color: wheat;
+    border-radius: 10%;
+    border-style: double;
+    border-color: black;
+    border-width: 20px;
 }
+
+.input {
+    margin-bottom: 10%;
+}
+
+.label {
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 30%;
+    border-style: double;
+    border-color: black;
+}
+
 

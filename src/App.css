@@ -1,6 +1,14 @@
 .App {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items:center;
   justify-content: center;
+}
+
+body {
+  background-image: url(./wp2141407-671291316.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed
 }

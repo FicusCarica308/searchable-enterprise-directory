@@ -40,7 +40,8 @@ function Search(props) {
       }
     })
     .then((data) => {
-      alert(JSON.stringify(data));
+      props.setDisplayData(data);
+      props.setWasSearched(true);
     })
     .catch((error) => console.log('error handled', error));
   }
@@ -49,24 +50,24 @@ function Search(props) {
     <div id='search'>
       <form id='search_form' onSubmit={handleSubmit}>
         <h1>Dont input anything to get all employees !</h1>
-        <label htmlFor='name_input' id='name_label'>Name of Employee - Format: (lastname, firstname)</label>
-        <input className='input' type='text' name='name_input' id='name_input' onChange={(e)=> {setNAME(e.target.value)}}></input>
+        <label className='label' htmlFor='name_input' id='name_label'>Name of Employee</label>
+        <input className='input' placeholder='Format: (lastname, firstname)'  type='text' name='name_input' id='name_input' onChange={(e)=> {setNAME(e.target.value)}}></input>
 
-        <label htmlFor='phone_input' id='phone_label'>Phone # of employee - Format (123-456-7891)</label>
-        <input className='input' type='text' name='phone_input' id='phone_input' onChange={(e)=> {setPHONE(e.target.value)}}></input>
+        <label className='label' htmlFor='phone_input' id='phone_label'>Phone # of employee</label>
+        <input className='input' placeholder='Format (123-456-7891)'  type='text' name='phone_input' id='phone_input' onChange={(e)=> {setPHONE(e.target.value)}}></input>
 
-        <label htmlFor='role_input' id='role_label'>Role of Employee - Format (Any ATM)</label>
-        <input className='input' type='text' name='role_input' id='role_input' onChange={(e)=> {setROLE(e.target.value)}}></input>
+        <label className='label' htmlFor='role_input' id='role_label'>Role of Employee</label>
+        <input className='input' placeholder='Format (Any ATM)'  type='text' name='role_input' id='role_input' onChange={(e)=> {setROLE(e.target.value)}}></input>
 
-        <label htmlFor='location_input' id='location_label'>Location of Employee - Format (City, State)</label>
-        <input className='input' type='text' name='location_input' id='location_input' onChange={(e)=> {setLOCATION(e.target.value)}}></input>
+        <label className='label' htmlFor='location_input' id='location_label'>Location of Employee</label>
+        <input className='input' placeholder='Format (City, State)'  type='text' name='location_input' id='location_input' onChange={(e)=> {setLOCATION(e.target.value)}}></input>
 
-        <label htmlFor='type_input' id='type_label'>Type of Employee - ('HR', 'MANAGER', or 'EMPLOYEE')</label>
-        <input className='input' type='text' name='type_input' id='type_input' onChange={(e)=> {setTYPE(e.target.value)}}></input>
+        <label className='label' htmlFor='type_input' id='type_label'>Type of Employee</label>
+        <input className='input' placeholder="('HR', 'MANAGER', or 'EMPLOYEE')"  type='text' name='type_input' id='type_input' onChange={(e)=> {setTYPE(e.target.value)}}></input>
         <button onClick={() => {handleQuery()}}>Submit</button>
       </form>
+      <button onClick={()=> {props.setLoggedIn(false); props.setUserData({})}}>Logout</button>
     </div>
-    <button onClick={()=> {props.setLoggedIn(false); props.setUserData({})}}>Logout</button>
     </>
   );
 }
