@@ -1,0 +1,56 @@
+#result_table {
+    width: 40vw;
+    background-color: whitesmoke; 
+    border-color: black;
+    border-radius: 10px;
+    border-style: double;
+}
+
+tbody {
+   background-color: whitesmoke; 
+   border-color: black;
+   border-radius: 10px;
+   border-style: double;
+}
+
+td {
+    overflow: auto;
+}
+
+#is_user {
+    background-color: orange;
+}
+
+#results {
+    width: 40vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 85px;
+    background-color: wheat;
+    border-radius: 10%;
+    border-style: double;
+    border-color: black;
+    border-width: 20px;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#go_back_button {
+    width: 100%;
+}
+
+
+@media (max-width: 900px) {
+    #result_table {
+        width: 100vw;
+        margin-left: 250px
+    }
+
+    #go_back_button {
+        margin-left: 250px;
+    }
+    
+  }
+  

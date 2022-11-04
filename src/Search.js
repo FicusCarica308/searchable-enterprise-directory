@@ -49,7 +49,8 @@ function Search(props) {
     <>
     <div id='search'>
       <form id='search_form' onSubmit={handleSubmit}>
-        <h1>Dont input anything to get all employees !</h1>
+        <h3>Hello, {props.userData.name}!</h3>
+        <h3>Dont input anything to get all employees !</h3>
         <label className='label' htmlFor='name_input' id='name_label'>Name of Employee</label>
         <input className='input' placeholder='Format: (lastname, firstname)'  type='text' name='name_input' id='name_input' onChange={(e)=> {setNAME(e.target.value)}}></input>
 
